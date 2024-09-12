@@ -6,27 +6,27 @@
     <title>Vite + Tailwind CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
+  <body class="bg-[#F8F9FF]">
     <header>
       <nav>
-        <div class="container flex justify-between py-5">
+        <div class="container flex items-center justify-center py-5 lg:justify-between md:gap-72">
           <div>
             <img src="../images/Logo.svg" alt="Logo" class="" />
           </div>
           <ul class="flex items-center justify-between gap-12">
-            <li>
+            <li class="hidden lg:block">
               <a href="#">
                 <span class="text-[#009379] font-semibold">Contact</span>
               </a>
             </li>
-            <li>
+            <li class="hidden md:block">
               <button
                 class="rounded-2xl text-[#009379] bg-[#E5F4F2] py-4 px-12 font-semibold"
               >
                 How it works
               </button>
             </li>
-            <li class="flex items-center">
+            <li class="items-center hidden lg:flex">
               <button
                 class="px-12 py-4 text-white bg-[#009379] rounded-2xl font-semibold flex gap-2 items-center"
               >
@@ -39,20 +39,20 @@
       </nav>
     </header>
     <main>
-      <section class="hero__section mt-28">
-        <div class="container flex items-center justify-between py-[120px]">
+      <section class="hero__section ">
+        <div class="container flex flex-col lg:flex-row gap-10 items-center justify-between py-[60px] md:py-24 lg:py-[120px]">
           <div class="flex flex-col gap-5">
-            <h1 class="text-6xl font-bold leading-[87px] tracking-[-2.5%] text-[#2D2D2D]">Create Engaging <br>
+            <h1 class="text-6xl text-center lg:text-left font-bold leading-[87px] tracking-[-2.5%] text-[#2D2D2D]">Create <br class="md:hidden"> Engaging <br class="">
               Landing Pages
             </h1>
-              <p class="text-sm font-normal text-[#2D2D2D]">
-                Build beautiful landing pages in record time with 
+              <p class="text-sm text-center lg:text-left font-normal text-[#2D2D2D]">
+                Build beautiful landing pages in record <br class="md:hidden"> time with 
               <a href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples">
-                <span class="text-[#0000FF]">Anima’s</span>
+                <span class="text-[#3366FF]">Anima’s</span>
               </a>
-              Landing <br> Page UI kit for Figma. No code required!
+              Landing <br class="hidden md:inline-block"> Page UI kit for <br class="md:hidden"> Figma. No code required!
               </p>
-              <div class="flex gap-4 btn-container">
+              <div class="flex items-center justify-center gap-4 btn-container">
                 <button
                 class="px-12 py-4 text-white bg-[#009379] rounded-2xl font-semibold flex gap-2 items-center"
               >
@@ -60,7 +60,7 @@
                 <span>Get Started</span>
               </button>
               <button
-                class="rounded-2xl text-[#009379] bg-transparent py-4 px-12 font-semibold border-[#009379] border-solid border-[1px]"
+                class="rounded-2xl text-[#009379] bg-transparent py-4 px-12 font-semibold border-[#009379] border-solid border-[1px] hidden lg:block"
               >
                 How it works
               </button>
@@ -72,7 +72,7 @@
         </div>
       </section>
       <section class="sponsors__section py-[60px] px-14">
-        <div class="container grid grid-cols-6 gap-32 border-t-[1px] border-b-[1px] border-[#D8D8D8] justify-items-center py-[60px]">
+        <div class="container grid grid-cols-3 gap-10 border-t-[1px] border-b-[1px] border-[#D8D8D8] justify-items-center py-7 px-7 md:grid-cols-6">
           <img src="./images/airnbb.svg" alt="airnbnb logo">
           <img src="./images/google.svg" alt="airnbnb logo">
           <img src="./images/amazon.svg" alt="airnbnb logo">
@@ -81,49 +81,60 @@
           <img src="./images/hubspot.svg" alt="airnbnb logo">
         </div>
       </section>
-      <section class="border border-red-800 features__section">
-        <div class="border border-red-800 container flex flex-col items-center justify-between gap-[60px] py-[120px]">
+      <section class="features__section">
+        <div class="container flex flex-col items-center justify-between gap-[60px] py-[60px] md:py-[100px] lg:py-[120px]">
           <div class="flex flex-col items-center justify-center gap-5 features__intro">
             <h1 class="text-4xl font-bold">Features</h1>
-            <span>These are just a few features you’ll get using Anima Landing Page Ui Kit.</span>
+            <span class="hidden lg:block">These are just a few features you’ll get using Anima Landing Page Ui Kit.</span>
+            <span class="text-center lg:hidden">Few good reasons why you should use <br> Anima Landing Page Ui Kit to make your <br> own pages.</span>
           </div>
-          <div class="grid items-center grid-cols-3 gap-8 features__cards">
-            <div class="flex flex-col gap-8 px-8 py-10 features__card shadow-[34.85px 29.63px 48.34px 0px #3366FF0D] rounded-[20px]">
-              <img src="./images/card img.png" alt="card image" class="">
-              <h4>Fast building</h4>
-              <p>
+          <div class="grid items-center grid-cols-1 gap-8 md:w-full lg:grid-cols-3 features__cards">
+            <div class="flex flex-col items-center gap-8 px-8 py-10 shadow-[34px_29px_48px_0px #3366FF0D] rounded-[20px] border-[1px] border-[#E5F4F20 border-solid]">
+              <img src="./images/card img.png" alt="card image" class="border-[1px solid #E5F4F2]">
+              <h4 class="text-3xl font-semibold text-[#2D2D2D]">
+                Fast building
+              </h4>
+              <p class="text-base font-normal leading-6 text-center">
+                Tailor Anima's Landing Page UI Kit to <br class="md:hidden">
+                your unique style and brand with <br>
+                customisable components, in no time!
+              </p>
+              <a href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples" class="flex items-center gap-2">
+                <span class="text-[#009379] font-semibold">Learn More</span>
+                <img src="./images/green-arrow.svg" alt="green-arrow">
+              </a>
+            </div>
+            <div class="flex flex-col items-center gap-8 px-8 py-10 shadow-[34px_29px_48px_0px #3366FF0D] rounded-[20px] border-[1px] border-[#E5F4F20 border-solid]">
+              <img src="./images/card img.png" alt="card image" class="border-[1px solid #E5F4F2]">
+              <h4 class="text-3xl font-semibold text-[#2D2D2D]">
+                Fast building
+              </h4>
+              <p class="text-base font-normal leading-6">
                 Tailor Anima's Landing Page UI Kit to <br>
                 your unique style and brand with <br>
                 customisable components, in no time!
               </p>
-              <a href="#">
-                <span>Learn More</span>
+              <a href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples" class="flex items-center gap-2">
+                <span class="text-[#009379] font-semibold">Learn More</span>
+                <img src="./images/green-arrow.svg" alt="green-arrow">
               </a>
             </div>
-            <div class="features__card shadow-[34.85px 29.63px 48.34px 0px #3366FF0D] rounded-[20px]">
-              <img src="./images/card img.png" alt="card image">
-              <h4>Fast building</h4>
-              <p>
+            <div class="flex flex-col items-center gap-8 px-8 py-10 shadow-[34px_29px_48px_0px #3366FF0D] rounded-[20px] border-[1px] border-[#E5F4F20 border-solid]">
+              <img src="./images/card img.png" alt="card image" class="border-[1px solid #E5F4F2]">
+              <h4 class="text-3xl font-semibold text-[#2D2D2D]">
+                Fast building
+              </h4>
+              <p class="text-base font-normal leading-6">
                 Tailor Anima's Landing Page UI Kit to <br>
                 your unique style and brand with <br>
                 customisable components, in no time!
               </p>
-              <a href="#">
-                <span>Learn More</span>
+              <a href="https://www.animaapp.com/?utm_source=figma-samples&utm_campaign=figma-lp-ui-kit&utm_medium=figma-samples" class="flex items-center gap-2">
+                <span class="text-[#009379] font-semibold">Learn More</span>
+                <img src="./images/green-arrow.svg" alt="green-arrow">
               </a>
             </div>
-            <div class="features__card shadow-[34.85px 29.63px 48.34px 0px #3366FF0D] rounded-[20px]">
-              <img src="./images/card img.png" alt="card image">
-              <h4>Fast building</h4>
-              <p>
-                Tailor Anima's Landing Page UI Kit to <br>
-                your unique style and brand with <br>
-                customisable components, in no time!
-              </p>
-              <a href="#">
-                <span>Learn More</span>
-              </a>
-            </div>
+            
           </div>
         </div>
       </section>
